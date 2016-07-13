@@ -26,9 +26,9 @@ public class RadioPrincipal {
     		opcionSeleccionada = teclado.nextLine();
 
     		if (opcionSeleccionada.equals("1")){
-    			if (radio.isOn().equals("Apagada")) {
+    			if (radio.isOn()==false) {
     				radio.on();
-    			} else if (radio.isOn().equals("Encendida")) {
+    			} else if (radio.isOn()==true) {
     				radio.off();
     			}
 
