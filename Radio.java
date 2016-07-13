@@ -12,7 +12,7 @@
 public class Radio implements iRadio{
 
 	// Se crean los atributos y los arrays utilizados
-	private String onOff;
+	private boolean onOff;
 	private String frecuency;
 	private String station;
 	private int positionAM;
@@ -23,7 +23,7 @@ public class Radio implements iRadio{
 
 	// Se crea el constructor
 	public Radio(){
-		this.onOff = "Apagada";
+		this.onOff = false;
 		this.frecuency = "AM";
 		this.station = "530";
 		this.positionAM = 530;
@@ -34,17 +34,12 @@ public class Radio implements iRadio{
 
 
 	// on establece que onOff es igual a Encendida	
-	public void on(){
-		onOff = "Encendida";
-	}
-
-	// off establece que onOff es igual a Apagada	
-	public void off(){
-		onOff = "Apagada";
+	public void OnOff(){
+		onOff=!onOff;
 	}
 
 	// isOn devuelve el atributo onOff
-	public String isOn(){
+	public boolean isOn(){
 		return onOff;
 	}
 
@@ -159,7 +154,7 @@ public class Radio implements iRadio{
 	}
 
 	// se crea para poder dar los valores para mostrar en pantalla
-	public String toString(String frecuency, String station){
+	public String toString(){
 		String st = station + " " + frecuency;
 		return st;
 	}
