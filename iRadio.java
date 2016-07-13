@@ -12,9 +12,8 @@
 
 public interface iRadio {
 
-	public void on();
-	public void off();
-	public String isOn();
+	public void OnOff();
+	public boolean isOn();
 	public String getFrecuency();
 	public void setFrecuency(String frecuency);
 	public String getStation();
@@ -22,6 +21,6 @@ public interface iRadio {
 	public void forward();
 	public void backward();
 	public void setMemory(int position);
-	public String toString(String frecuency, String station);
+	public String toString();
 }
 
