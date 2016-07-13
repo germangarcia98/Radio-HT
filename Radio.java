@@ -104,7 +104,7 @@ public class Radio implements iRadio{
 	}
 
 	// Se utiliza para cambiar los valores para memoryFM
-	public void setMemoryFM(Double[] memoryAM){
+	public void setMemoryFM(Double[] memoryFM){
 		this.memoryFM = memoryFM;
 	}
 
