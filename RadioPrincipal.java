@@ -27,12 +27,12 @@ public class RadioPrincipal {
 
     		if (opcionSeleccionada.equals("1")){
     			if (radio.isOn()==false) {
-    				radio.on();
+    				radio.OnOff();
     			} else if (radio.isOn()==true) {
-    				radio.off();
+    				radio.OnOff();
     			}
 
-    		} else if (opcionSeleccionada.equals("2")){
+    		} else if (opcionSeleccionada.equals("2")&&radio.isOn()==true){
     			if (radio.getFrecuency().equals("AM")){
     				radio.setFrecuency("FM");
     				emisora = String.valueOf(radio.getPositionFM());
@@ -42,7 +42,7 @@ public class RadioPrincipal {
     				emisora = String.valueOf(radio.getPositionAM());
     			}
 
-    		} else if (opcionSeleccionada.equals("3")){
+    		} else if (opcionSeleccionada.equals("3")&&radio.isOn()==true){
     			radio.forward();
 
     			if (radio.getFrecuency().equals("AM")){
@@ -52,7 +52,7 @@ public class RadioPrincipal {
     				emisora = String.valueOf(radio.getPositionFM());
     			}
 
-    		} else if (opcionSeleccionada.equals("4")){
+    		} else if (opcionSeleccionada.equals("4")&&radio.isOn()==true){
     			radio.backward();
 
     			if (radio.getFrecuency().equals("AM")){
@@ -62,12 +62,12 @@ public class RadioPrincipal {
     				emisora = String.valueOf(radio.getPositionFM());
     			}
 
-    		} else if (opcionSeleccionada.equals("5")){
+    		} else if (opcionSeleccionada.equals("5")&&radio.isOn()==true){
     			System.out.println("Escoja la posición en la que desea guardar esta emisora: \n1)\n2)\n3)\n4)\n5)\n6)\n7)\n8)\n9)\n10)\n11)\n12)");
     			String posicionAGuardar = teclado.nextLine();
     			int posicionInt = Integer.parseInt(posicionAGuardar);
     			radio.setMemory(posicionInt);
-    		} else if (opcionSeleccionada.equals("6")){
+    		} else if (opcionSeleccionada.equals("6")&&radio.isOn()==true){
     			String listaEmisoras = "";
     			int numeroEnLista = 0;
 
@@ -118,7 +118,7 @@ public class RadioPrincipal {
     		} else if (opcionSeleccionada.equals("7")){
     			salir = true;
     		} else {
-    			System.out.println("'" + (opcionSeleccionada) + "' NO ES UNA OPCION DE LA RADIO");
+    			System.out.println("'" + (opcionSeleccionada) + "' NO ES UNA OPCION DE LA RADIO O LA RADIO ESTA APAGADA");
     		}
 
     	}
